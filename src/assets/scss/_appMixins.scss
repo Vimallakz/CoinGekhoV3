@@ -1,0 +1,15 @@
+@function rem($pixels) {
+  @if type-of($pixels) == "number" {
+    @return $pixels / $font-size-default * 1rem;
+  } @else {
+    $rem_values: ();
+    @each $value in $pixels {
+      @if $value == 0 {
+        $rem_values: append($rem_values, $value);
+      } @else {
+        $rem_values: append($rem_values, ($value / $font-size-default) * 1rem);
+      }
+    }
+    @return $rem_values;
+  }
+}
