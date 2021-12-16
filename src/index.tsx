@@ -2,12 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './tailwind.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CoinList from './pages/CoinsList/CoinList';
+
+import '../node_modules/primereact/resources/themes/lara-light-indigo/theme.css';    // theme
+import '../node_modules/primereact/resources/primereact.min.css';                    // core css
+import '../node_modules/primeicons/primeicons.css';                        // icons
+import '../node_modules/primeflex/primeflex.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CoinList />
   </React.StrictMode>,
   document.getElementById('root')
 );
